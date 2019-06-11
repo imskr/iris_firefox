@@ -1,4 +1,3 @@
-
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -10,10 +9,10 @@ from targets.firefox.fx_testcase import *
 class Test(FirefoxTest):
 
     @pytest.mark.details(
-        description = 'Firefox can be set to display the home page on launch',
-        test_case_id = '143543',
-        test_suite_id = '2241',
-        locale = ['en-US'],
+        description='Firefox can be set to display the home page on launch',
+        test_case_id='143543',
+        test_suite_id='2241',
+        locale=['en-US'],
     )
     def run(self, firefox):
         default_new_tab_setting_home_pattern = Pattern('default_new_tab_setting_home.png')
