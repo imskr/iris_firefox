@@ -26,7 +26,8 @@ class Test(FirefoxTest):
         new_page_is_firefox_home = exists(homepage_new_windows_pattern)
         assert new_page_is_firefox_home, 'Firefox home page was set as default new page'
 
-        firefox.restart('about:home', Tabs.NEW_TAB_HIGHLIGHTED)
+        firefox.restart()
+        new_window()
 
         new_tab_opened = exists(Tabs.NEW_TAB_HIGHLIGHTED, Settings.SITE_LOAD_TIMEOUT)
         assert new_tab_opened, 'Browser was opened with firefox homepage'
