@@ -63,7 +63,8 @@ class Test(FirefoxTest):
 
         click(add_button_pattern)
 
-        address_first_name_field_exists = exists(address_first_name_field_pattern, FirefoxSettings.TINY_FIREFOX_TIMEOUT)
+        address_first_name_field_exists = exists(address_first_name_field_pattern.similar(0.6),
+                                                 FirefoxSettings.TINY_FIREFOX_TIMEOUT)
         assert address_first_name_field_exists, '\'First Name\' field is displayed on the \'Add new address\' popup'
 
         click(address_first_name_field_pattern)
